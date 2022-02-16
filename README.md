@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/stats-preview-card-component-using-flexbox-GMgm_jocJ)
+- Live Site URL: [Add live site URL here](https://julfinch.github.io/Stats-Preview-Card-Component/)
 
 ## My process
 1. I first created a div container(div id="container") where inside it are two div, one is for the left div where the texts can be found (div id="left-text") and the other one is for the right div where the image-header is applied (div id="right-image").
