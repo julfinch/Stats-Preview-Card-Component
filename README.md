@@ -49,6 +49,16 @@ Users should be able to:
 
 ### What I learned
 - At first attempt, I find it hard to change the hue of the image using the provided color values. Later, I found out that I can just apply that value as background color of the right div and change the image opacity using filter.
+
+Update: I changed it by using background-blend:multiply instead and removed the image-header-desktop in the html and applied it as background-image in the css while putting its highlight color as background color.
+
+```css
+background: hsl(277, 64%, 61%);
+background-image: url("/images/image-header-desktop.jpg");
+border-radius: 0 10px 10px 0;
+background-blend-mode: multiply;
+```
+
 - I used flexbox for the container and to put the left div and right div at the center, I applied justify content and align-items written just like below: 
 
 ```css
@@ -69,6 +79,15 @@ But I found a problem using this method, the bottom of the left div and right di
     left: 50%;
     transform: translate(-50%, -50%);
 }
+```
+
+Update: After learning from a feedback in my other completed challenge that using absolute positioning to center contens is already deprecated, I used Flexbox instead right after.
+
+```css
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
 ```
 
 ## Author
