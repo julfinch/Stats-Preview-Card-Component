@@ -11,15 +11,16 @@ html {
     overflow: hidden;
     min-height: 100vh;
     background: hsl(233, 47%, 7%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 #container {
     display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 #left-text {
+    position: relative;
     width: 500px;
     height: 400px;
     background: hsl(244, 38%, 16%);
@@ -44,10 +45,16 @@ h1 {
 }
 #stats {
     display: flex;
+    flex-wrap: nowrap;
     width: 300px;
     color: hsla(0, 0%, 100%, 0.6);
-    margin-top: 70px;
     justify-content: space-between;
+    margin-top: 70px;
+    align-items: center;
+    
+}
+.stats-item {
+    width: 65px;
 }
 .stats-number {
     font-family: 'Lexend Deca', sans-serif;
@@ -63,70 +70,116 @@ h1 {
 }
 #right-image {
     height: 400px;
+    width: 500px;
     background: hsl(277, 64%, 61%);
+    background-image: url("/images/image-header-desktop.jpg");
     border-radius: 0 10px 10px 0;
+    background-blend-mode: multiply;
 }
-img {
-    border-radius: 0 10px 10px 0;
-    height: 400px;
-    filter: opacity(60%);
-} 
 #attribution {
     position: absolute;
     width: 100%;
-    bottom: 10px;
+    bottom: 0;
     color: hsla(0, 0%, 100%, 0.75);
-    font-size: 11px; 
+    font-size: 10px; 
     text-align: center;
     font-family: 'Inter', sans-serif;
 }
 #attribution a { 
     color: hsl(228, 45%, 44%); 
 }
-@media (min-width: 375px) and (max-width:990px) {
-    body, html {
-        overflow-y: visible;
-        height: 960px;
+@media screen and (max-width:999px) {
+    body {
+        padding: 0;
     }
     #container {
-        width: 400px;
-        height: 950px;
-        margin: 100px 0;
-        display: flex;
-        flex-flow: column-reverse;
-        align-items: center;
+        width: 100%;
     }
     #left-text {
-        border-radius: 0 0 10px 10px;
-        width: 400px;
-        height: 520px;
-        text-align: center;
+        width: 100%;
+        height: 300px;
+        padding: 30px 0 30px 30px;
+    }
+    h1 {
+        font-size: 1.7rem;
     }
     #main-paragraph {
-        text-align: center;
-        padding: 0 40px;
-        height: 120px;
-    }
-    #right-image {
-        border-radius: 10px 10px 0 0;
-        width: 400px;
-        height: 300px;
-    }    
-    img {
-        height:100%;
-        width: 400px;
-        border-radius: 10px 10px 0 0;
+        margin-top: 10px;
+        width: 280px;
+        font-size: 11px;
     }
     #stats {
-        display: flex;
-        height: 150px;
-        flex-flow: column;
-        margin-top: 20px;
-        justify-content: space-between;
-        
+        width: 260px;
+        margin-top: 25px;
     }
-    #attribution {
-        top: 940px;
+    #right-image {
+        width: 100%;
+        height: 300px;
+        background-size: cover;
     }
 
 }
+
+@media screen and (max-width:425px) {
+    body, html {
+        overflow-y: visible;
+        position: relative;
+        display: flex;
+        align-content: center;
+    }
+    #container {
+        width: 340px;
+        height: 950px;
+        display: flex;
+        flex-flow: column-reverse;
+        align-items: center;
+        margin: -30px 10px 90px;
+
+    }
+    #left-text {
+        border-radius: 0 0 10px 10px;
+        width: 340px;
+        height: 575px;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    #main-paragraph {
+        margin-top: 1rem;
+        text-align: center;
+        padding: 0 10px;
+        height: 120px;
+        font-size: 1rem;
+        line-height: 1.6rem;
+        width: 100%;
+    }
+    #right-image {
+        border-radius: 10px 10px 0 0;
+        width: 340px;
+        height: 250px;
+        background: hsl(277, 64%, 61%);
+        background-image: url("/images/image-header-mobile.jpg");
+        background-blend-mode: multiply;
+        background-size: cover;
+    }    
+    #stats {
+        display: flex;
+        width: 100%;
+        height: 240px;
+        flex-flow: column;
+        margin-top: 25px;
+        justify-content: space-between;
+    }
+    .stats-number {
+        font-size: 1.7rem;
+    }
+    .stats-categories {
+        font-size: 0.8rem;
+        margin-top: 7px;
+    }
+    #attribution {
+        position: absolute;
+        bottom: 0;
+    }    
+}
+    
+
