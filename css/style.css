@@ -71,7 +71,7 @@ h1 {
     height: 400px;
     width: 500px;
     background: hsl(277, 64%, 61%);
-    background-image: url('./images/image-header-desktop.jpg');
+    background-image: url('/images/image-header-desktop.jpg');
     border-radius: 0 10px 10px 0;
     background-blend-mode: multiply;
 }
@@ -162,7 +162,7 @@ h1 {
         width: 340px;
         height: 250px;
         background: hsl(277, 64%, 61%);
-        background-image: url('./images/image-header-mobile.jpg');
+        background-image: url('/images/image-header-mobile.jpg');
         background-blend-mode: multiply;
         background-size: cover;
     }    
